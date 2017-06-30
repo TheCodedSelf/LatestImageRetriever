@@ -21,6 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erl-Is-Uax">
+                                <rect key="frame" x="121.5" y="577" width="131" height="30"/>
+                                <state key="normal" title="Show Latest Image"/>
+                                <connections>
+                                    <action selector="showLatestImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rat-Yj-L3g"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyV-s8-sap">
                                 <rect key="frame" x="149.5" y="617" width="75" height="30"/>
                                 <state key="normal" title="Pick Image"/>
@@ -28,13 +35,25 @@
                                     <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKt-aX-V9H"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1S-N9-JP3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="547"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VyV-s8-sap" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6rQ-XS-y9T"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VyV-s8-sap" secondAttribute="bottom" constant="20" id="Bzs-QX-MwB"/>
+                            <constraint firstItem="erl-Is-Uax" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ggl-sL-qbU"/>
+                            <constraint firstItem="VyV-s8-sap" firstAttribute="top" secondItem="erl-Is-Uax" secondAttribute="bottom" constant="10" id="LJr-al-ohP"/>
+                            <constraint firstItem="erl-Is-Uax" firstAttribute="top" secondItem="u1S-N9-JP3" secondAttribute="bottom" constant="10" id="Px4-RV-Dvr"/>
+                            <constraint firstItem="u1S-N9-JP3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ULq-Ng-cd3"/>
+                            <constraint firstAttribute="trailing" secondItem="u1S-N9-JP3" secondAttribute="trailing" id="WKC-XG-UCa"/>
+                            <constraint firstItem="u1S-N9-JP3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f6a-qH-f7n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="u1S-N9-JP3" id="cGs-9q-6l7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
